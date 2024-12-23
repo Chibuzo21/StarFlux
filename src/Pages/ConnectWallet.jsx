@@ -1,7 +1,7 @@
 import React from "react";
 import Star from "/Star.svg";
 
-const ConnectWallet = () => {
+const ConnectWallet = ({ HandleClick }) => {
   return (
     <main className="bg-black items-center min-h-fit h-screen flex justify-center ">
       <section className=" text-white  h-[80%] flex flex-col items-center  ">
@@ -12,7 +12,10 @@ const ConnectWallet = () => {
         <p className="mb-3 text-center text-sm sm:text-md">
           Top up Stars Balance for yourself or your friends and colleagues
         </p>
-        <button className="ConnectButton">Connect Wallet</button>
+
+        <button onClick={HandleClick} className="ConnectButton">
+          Connect Wallet
+        </button>
       </section>
     </main>
   );
