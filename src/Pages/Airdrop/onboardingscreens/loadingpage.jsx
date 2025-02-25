@@ -2,7 +2,8 @@ import React from "react";
 
 
 
-const Task=()=>{
+const Loadingpage =()=>{
+
     return(
         <div>
 
@@ -10,4 +11,4 @@ const Task=()=>{
 
     )
 }
-export default Task
+export default Loadingpage
