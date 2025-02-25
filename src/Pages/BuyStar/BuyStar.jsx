@@ -6,14 +6,9 @@ import Star from "/star2.svg";
 
 const BuyStar = () => {
   return (
-    <main className="bg-black items-center min-h-screen h-fit flex justify-center py-10  ">
+    <main className="bg-black items-start min-h-screen h-fit flex justify-center py-10  ">
       <section className=" flex items-center  flex-col text-white ">
-        <div className="bg-white rounded-xl text-black mb-6 text-lg w-[70%]">
-          <button className="bg-[#79857C] py-2  w-[50%] font-medium rounded-xl text-white">
-            Buy Stars
-          </button>
-          <button className="font-medium mx-6">Airdrop</button>
-        </div>
+       
         <div className="grid gap-4 text-center my-4">
           <p className="sm:text-3xl text-2xl font-semibold">
             Buy Telegram Stars

@@ -6,6 +6,7 @@ import { useTonConnectUI } from "@tonconnect/ui-react";
 
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";
+import Home from "./Pages/home";
 
 const App = () => {
   const [walletConnected, setWalletConnected] = useState(true);
@@ -35,11 +36,13 @@ const App = () => {
             walletConnected ? (
               <ConnectWallet HandleClick={HandleClick} />
             ) : (
-              <Navigate to="/BuyStar" />
+              <Navigate to="/Home" />
             )
           }
         />
-        <Route path="/BuyStar" element={<BuyStar />} />
+
+        {/* <Route path="/BuyStar" element={<BuyStar />} /> */}
+        <Route path="/Home" element={<Home />} />
       </Routes>
     </div>
   );
