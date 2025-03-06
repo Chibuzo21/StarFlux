@@ -7,6 +7,7 @@ import { useTonConnectUI } from "@tonconnect/ui-react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./Pages/home";
+import AirdropHome from "./Pages/Airdrop/airdropHomePage";
 
 const App = () => {
   const [walletConnected, setWalletConnected] = useState(true);
@@ -41,8 +42,9 @@ const App = () => {
           }
         />
 
-        {/* <Route path="/BuyStar" element={<BuyStar />} /> */}
         <Route path="/Home" element={<Home />} />
+        <Route path="/BuyStar" element={<BuyStar />} />
+        <Route path="/airdropHome" element={<AirdropHome />} />
       </Routes>
     </div>
   );

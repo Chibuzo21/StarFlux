@@ -9,14 +9,16 @@ const Home = () => {
         { label: 'Airdrop', component: <Airdrop /> },
       ];
       return(
-        <div>
+        // <div style={{backgroundColor:"transparent", height:"100vh"}}>
+    <main className=" items-space-between h-screen  flex justify-center  ">
 
-          <TopTabs 
-          tabComponents={tabComponents} 
-          />
+      <TopTabs 
+      tabComponents={tabComponents} 
+      />
+    </main>
         
 
-        </div>
+        // </div>
       )
  
     }

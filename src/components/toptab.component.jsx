@@ -9,11 +9,16 @@ const TopTabs = ({ tabComponents }) => {
 
   return (
     <div 
-    style={{ backgroundColor: "black", display: "flex",flexDirection:"column",justifyContent:"center", alignItems:"center" }
+    style={{  backgroundColor: "blue", display:  "flex",flexDirection:"column", alignItems:"center" , width:"100%"}
   }
   >
-      <div style={{ display: 'flex' ,borderRadius:"10px",backgroundColor:"white", width:"27%",
-        marginTop:"20px"
+    <div  style={{ display: 'flex' ,borderRadius:"10px", height:"",}}>
+      
+
+
+    </div>
+      <div style={{ display: 'flex' ,borderRadius:"10px",backgroundColor:"white", width:"40%",
+        
        }}>
         {tabComponents.map((tab, index) => (
 
@@ -27,6 +32,7 @@ const TopTabs = ({ tabComponents }) => {
               borderRadius:"10px",
               alignContent: "center",
               justifyContent:"center",
+              // height:"70px",
 
               // borderBottom: activeTab === index ? '2px solid red' : '2px solid blue',
               fontWeight: activeTab === index ? 'bold' : 'normal',
@@ -39,7 +45,7 @@ const TopTabs = ({ tabComponents }) => {
           </div>
         ))}
       </div>
-      <div>
+      <div style={{ backgroundColor:"transparent", width:"100%"}}>
         {tabComponents[activeTab].component}
       </div>
     </div>
