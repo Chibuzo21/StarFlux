@@ -8,6 +8,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./Pages/home";
 import AirdropHome from "./Pages/Airdrop/airdropHomePage";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const App = () => {
   const [walletConnected, setWalletConnected] = useState(true);
@@ -28,24 +29,27 @@ const App = () => {
       tonConnectUI.openModal();
     }, 1200);
   };
+  const queryClient = new QueryClient();
   return (
     <div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            walletConnected ? (
-              <ConnectWallet HandleClick={HandleClick} />
-            ) : (
-              <Navigate to="/Home" />
-            )
-          }
-        />
+      <QueryClientProvider client={queryClient}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              walletConnected ? (
+                <ConnectWallet HandleClick={HandleClick} />
+              ) : (
+                <Navigate to="/Home" />
+              )
+            }
+          />
 
-        <Route path="/Home" element={<Home />} />
-        <Route path="/BuyStar" element={<BuyStar />} />
-        <Route path="/airdropHome" element={<AirdropHome />} />
-      </Routes>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/BuyStar" element={<BuyStar />} />
+          <Route path="/airdropHome" element={<AirdropHome />} />
+        </Routes>
+      </QueryClientProvider>
     </div>
   );
 };
