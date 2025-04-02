@@ -4,6 +4,10 @@ import AirdropHome from '../../Pages/Airdrop/airdropHomePage';
 import { AiFillHome } from "react-icons/ai";
 import { GiTwoCoins } from "react-icons/gi";
 import { FaUsers } from "react-icons/fa";
+import background from "../../assets/background1.jpg"
+import Task from '../../Pages/Airdrop/airdropTasks';
+import Invite from '../../Pages/Airdrop/airdropinvite';
+// import Bck from "../../background1.jpg"
 
 
 
@@ -15,9 +19,13 @@ const BottomTab = () => {
   };
 
   const tabStyle = {
-    padding: '10px 15px',
+    // padding: '10px 15px',
     cursor: 'pointer',
     textAlign: 'center',
+      padding:"25px",
+      // position :"absolute" ,
+      // bottom :"0",
+      
     // flex: 1,
     // backgroundColor:"red"
 
@@ -27,51 +35,69 @@ const BottomTab = () => {
   const activeTabStyle = {
     ...tabStyle,
     // backgroundColor: '#e0f7fa',
-    borderTop: '2px solid #03a9f4',
-    fontWeight: 'bold',
+    // borderTop: '2px solid #03a9f4',
+    // fontWeight: 'bold',
+  
+    color:"red"
   };
 
   const containerStyle = {
     display: 'flex',
     borderTop: '1px solid #ccc',
     // height:"20vh"
-    // backgroundColor: '#f8f8f8',
+    backgroundColor: 'green',
+    width:"100%"
   };
 
   const contentStyle = {
     // padding: '20px',
-    textAlign: 'center',
-    height:"89.5vh",
-    backgroundColor:"red"
+    // textAlign: 'center',
+    // height:"100%",
+    // backgroundColor:"red"
   };
 
   const getContent = () => {
     switch (activeTab) {
       case 'Home':
-        return <div style={contentStyle}>
-            Welcome to the Home screen! ff gkgkglggkg gggg mmmgmg gg
+        return <div style={{width:"100%"}}>
         <AirdropHome/>
         
         
         </div>;
       case 'Earn':
-        return <div style={contentStyle}>
+        return <div style={{width:"100%"}}>
           
-          Welcome to the Home screen! ff gkgkglggkg gggg mmmgmg gg
-          <AirdropHome/></div>;
+          <Task/></div>;
       case 'Invite':
-        return <div style={contentStyle}>
-            Welcome to the Home screen! ff gkgkglggkg gggg mmmgmg gg
-            <AirdropHome/></div>;
+        return <div style={{width:"100%"}}>
+            <Invite/></div>;
       default:
         return null;
     }
   };
 
   return (
-    <div  className="bg-blue-500  h-fit  ">
-      <div style={contentStyle} >{getContent()}</div>
-      <div className='width  text-white text-lg flex justify-between px-9 items-center bg-[#79857C]  rounded-xl border-[3px] border-white my-4"
+    <div 
+    
+    style={{
+      // backgroundImage:url[("../../assets/background1.jpg")]
+    }}
+    
+    // h-[100%] flex flex-col  justify-end px-5   bottom-0 left-0
+    className="
+     h-full flex flex flex-col   justify-end
+    "
+    >
+      <div style={contentStyle} > {getContent()}</div>
+      <div style={{
+        paddingRight:"",
+        paddingLeft:"20px"
+      }}>
+
+      </div>
+      <div className=' width-[20%]  text-white text-lg flex justify-between px-9 items-center bg-blue-400  rounded-xl  "
+             bottom-0 left-0
+            
             '>
         <div
           style={activeTab === 'Home' ? activeTabStyle : tabStyle}

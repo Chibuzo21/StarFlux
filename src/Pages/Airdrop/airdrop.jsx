@@ -7,23 +7,25 @@ import Bottomtab from "../../components/bottomtab/bottomtab";
 const Airdrop = () => {
   return (
     <div 
+    
     // className=""
-    className="bg-black items-start  h-fit flex justify-center py-0  "
+    // className="bg items-start flex flex-1  justify-center py-0  "
   
       style={{
-        // backgroundColor: "brown",
-        // height: "90vh",
-        // display: "flex",
-        // flexDirection: "column",
+        backgroundColor: "black",
+        height: "100%",
+        display: "flex",
+        flex:"1",
+        flexDirection: "column",
         // justifyContent: "center",
-        // alignItems: "center",
+        alignItems: "center",
         // width:"100%"
         // backgroundImage: url("../")
       }}
 
     >
       {/* <Loadingpage/> */}
-      {/* <Fluxtoken /> */}\
+      {/* <Fluxtoken /> */}
       {/* <AirdropHome/> */}
       <Bottomtab/>
           </div>
